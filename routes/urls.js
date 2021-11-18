@@ -14,6 +14,10 @@ const generateShortURL = () => {
     return shortURL;
 }
 
+router.get("/", (req, res) => {
+    res.status(200).json({ msg: "REST API for url-shortner" })
+})
+
 // Posts a long url and returns URL object
 router.post("/", async (req, res) => {
   var longURL = req.body.longURL;
